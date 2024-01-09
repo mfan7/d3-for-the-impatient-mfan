@@ -20,7 +20,10 @@ function makeDemo1() {                                         //<1>
                 //of <circle> elements inside the SVG that was 
                 //selected on line 6.
                 .append( "circle" )                            //<9>
+                //set the fixed attr radius and color
                 .attr( "r", 5 ).attr( "fill", "red" )          //<10>
+                //set non-fixed attr using accessor function() to
+                //return values in datapoint
                 .attr( "cx", function(d) { return d["x"] } )   //<11>
                 .attr( "cy", function(d) { return d["y"] } );    
         } );
